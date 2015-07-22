@@ -73,6 +73,7 @@ class IZoneInfo(IBaseComponentInfo):
     pod_count = schema.Int(title=_t(u"Pod Count"))
     cluster_count = schema.Int(title=_t(u"Cluster Count"))
     host_count = schema.Int(title=_t(u"Host Count"))
+    domain = SingleLineText(title=_t(u"Zone Domain"))
 
 
 class IPodInfo(IBaseComponentInfo):

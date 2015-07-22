@@ -113,7 +113,7 @@ class CloudStack(PythonPlugin):
         zone_maps = []
         for zone in zones_response.get('zone', []):
             zone_id = self.prepId('zone%s' % zone['id'])
-
+	    
             zone_maps.append(ObjectMap(data=dict(
                 id=zone_id,
                 title=zone.get('name', zone_id),
@@ -129,6 +129,7 @@ class CloudStack(PythonPlugin):
                 security_groups_enabled=zone.get('securitygroupsenabled', ''),
                 vlan=zone.get('vlan', ''),
                 zone_token=zone.get('zonetoken', ''),
+                domain=zone.get('domain',zone.get('name', '')),
                 )))
 
         yield RelationshipMap(

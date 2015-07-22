@@ -29,6 +29,7 @@ class Zone(BaseComponent):
     security_groups_enabled = None
     vlan = None
     zone_token = None
+    domain = None
 
     _properties = BaseComponent._properties + (
         {'id': 'guest_cidr_address', 'type': 'string', 'mode': ''},
@@ -41,6 +42,7 @@ class Zone(BaseComponent):
         {'id': 'security_groups_enabled', 'type': 'boolean', 'mode': ''},
         {'id': 'vlan', 'type': 'string', 'mode': ''},
         {'id': 'zone_token', 'type': 'string', 'mode': ''},
+        {'id': 'domain', 'type': 'string', 'mode': ''},
         )
 
     _relations = BaseComponent._relations + (

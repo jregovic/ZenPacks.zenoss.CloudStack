@@ -81,6 +81,7 @@ class ZoneInfo(BaseComponentInfo):
     security_groups_enabled = ProxyProperty('security_groups_enabled')
     vlan = ProxyProperty('vlan')
     zone_token = ProxyProperty('zone_token')
+    domain = ProxyProperty('domain')
 
     @property
     def public_dns(self):
